@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+<!-- 创建侧边栏和标题栏的模板 用于代码复用 -->
+<header class="header-wrapper main-header" th:fragment="header">
+    <div class="header-inner-wrapper">
+        <div class="logo-wrapper">
+            <a href="" class="admin-logo">
+<!--                v=1  更新缓存         -->
+                <img src="static/picture/logo.png?v=1" alt="">
+            </a>
+        </div>
+        <div class="header-right">
+            <div class="header-left">
+                <div class="header-links">
+                    <a href="javascript:void(0);" class="toggle-btn">
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+            <div class="header-controls">
+                <div class="user-info-wrapper header-links">
+                    <a href="javascript:void(0);" class="user-info">
+                        <img src="static/picture/user.jpg?v=2" alt="" class="user-img">
+<!--             一个blingbling闪闪发光的特效           -->
+<!--                        <div class="blink-animation">-->
+<!--                            <span class="blink-circle"></span>-->
+<!--                            <span class="main-circle"></span>-->
+<!--                        </div>-->
+                    </a>
+                    <div class="user-info-box">
+                        <div class="drop-down-header">
+                            <h4 th:text="${name}"></h4>
+                            <p>晓账本欢迎您！</p>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="account">
+                                    <i class="fas fa-cog"></i> 设置
+                                </a>
+                            </li>
+                            <li>
+                                <a href="logout">
+                                    <i class="fas fa-sign-out-alt"></i> 退出登录
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+</body>
+</html>

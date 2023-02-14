@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="zxx" xmlns:th="http://www.thymeleaf.org">
+<!--<![endif]-->
+<!-- Begin Head -->
+
+<head>
+    <title>晓账本</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="MobileOptimized" content="320">
+    <!--Start Style -->
+    <link rel="stylesheet" type="text/css" href="static/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/icofont.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+	<link rel="stylesheet" id="theme-change" type="text/css" href="">
+</head>
+
+<body>
+	<div class="loader">
+	  <div class="spinner">
+		<img src="static/picture/loader.gif" alt="">
+	  </div> 
+	</div>
+    <!-- Main Body -->
+    <div class="page-wrapper">
+        <div th:replace="header.html::header"></div>
+        <!-- Sidebar Start -->
+        <aside class="sidebar-wrapper">
+            <div class="side-menu-wrap">
+                <ul class="main-menu">
+                    <li>
+                        <a href="index">
+                            <span class="icon-menu feather-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                            </span>
+                            <span class="menu-text">
+                                控制台
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="record" class="active">
+                            <span class="icon-menu feather-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-package"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                            </span>
+                            <span class="menu-text">
+                                账单记录
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="category">
+                            <span class="icon-menu feather-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid nav-icon"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                            </span>
+                            <span class="menu-text">
+                                账单分类
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="account">
+                            <span class="icon-menu feather-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                            </span>
+                            <span class="menu-text">
+                                账户设置
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <!-- Container Start -->
+        <div class="page-wrapper">
+            <div class="main-content">
+                <!-- Page Title Start -->
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="page-title-wrapper">
+                            <div class="page-title-box">
+                                <h4 class="page-title">表单信息</h4>
+                            </div>
+                            <div class="breadcrumb-list">
+                                <ul>
+                                    <li class="breadcrumb-link">
+                                        <a href="javascript:void(0);"><i class="fas fa-home mr-2"></i>晓账本</a>
+                                    </li>
+                                    <li class="breadcrumb-link active">添加&修改</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- From Start -->
+                <div class="from-wrapper">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4>账单信息</h4>
+                                    <p class="card-desc">请在此添加或修改账单的信息</p>
+                                </div>
+                                <div class="card-body">
+                                    <form class="separate-form" method="post" action="addRecord" onsubmit="return validate()">
+                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                            <div class="row">
+                                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                                    <div class="form-group">
+                                                        <label for="amount" class="col-form-label">账单金额</label>
+                                                        <input class="form-control" type="text" placeholder="输入账单金额" id="amount" name="Amount">
+                                                    </div>
+                                                </div>
+<!-- 打算账单分类使用下拉框进行选择，下拉框当中显示的是已有的分类，最后一行来个“添加分类”，跳转到分类管理页面中 -->
+<!--                                                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">-->
+<!--                                                            <div class="form-group">-->
+<!--                                                                <label for="city" class="col-form-label">账单分类</label>-->
+<!--                                                                <select class="select2 form-control" id="city">-->
+<!--                                                                    <option value="分类1">分类1</option>-->
+<!--                                                                    <option value="分类2">分类2</option>-->
+<!--                                                                    <option value="分类3">分类3</option>-->
+<!--                                                                    <option value="分类4">分类4</option>-->
+<!--                                                                    <option value="分类5">分类5</option>-->
+<!--                                                                    <option value="分类6">分类6</option>-->
+<!--                                                                </select>-->
+<!--                                                            </div>-->
+<!--                                                        </div>-->
+<!-- 也包括账单类型、状态，类型不知道是什么意思，以后问问；类型可能不需要添加新类型了 -->
+                                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                                    <div class="form-group">
+                                                        <label for="city" class="col-form-label">账单分类</label>
+                                                        <select class="select2 form-control" id="city" name="CategoryID">
+                                                            <option th:each="category:${getCategoryName}" th:value="${category.getID()}" th:text="${category.getName()}"></option>
+<!--                                                            可以的话 这里可以搞个添加分类 跳转到分类的添加修改页面-->
+<!--                                                            <option>添加分类...</option>-->
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                                    <div class="form-group">
+                                                        <label for="company-name" class="col-form-label">账单类型</label>
+                                                        <input class="form-control" type="text" placeholder="输入账单类型" id="company-name" name="Type">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                                    <div class="form-group">
+                                                        <label for="web-url" class="col-form-label">账单状态</label>
+                                                        <input class="form-control" type="text" placeholder="输入账单状态" id="web-url" name="Status">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr class="mt-4 mb-4">
+                                            <h6 class="from-title mb-1">备注信息</h6>
+                                            <br/>
+                                            <div class="row">
+                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                                    <div class="form-group">
+                                                        <textarea class="form-control" placeholder="点击此处添加备注内容" id="additional-msg" name="Note"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group mb-0">
+                                                <button type="submit" class="btn btn-primary">确定</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="ad-footer-btm">
+                    <p>晓账本 后台管理系统 | 来自 <a target="_blank" href="https://www.sues.edu.cn/">上海工程技术大学</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Script Start -->
+	<script src="static/js/jquery.min.js"></script>
+    <script src="static/js/popper.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+	<script src="static/js/swiper.min.js"></script>
+    <script src="static/js/apexcharts.min.js"></script>
+    <script src="static/js/control-chart-apexcharts.js"></script>
+	<!-- Page Specific -->
+    <script src="static/js/nice-select.min.js"></script>
+    <!-- Custom Script -->
+    <script src="static/js/custom.js"></script>
+    <script>
+    function validate(){
+        let amount = document.getElementById("amount").value;
+        let pattern = /^\d+(\.\d{1,2})?$/;
+        if(!pattern.test(amount)){
+            alert("您似乎输入了一个格式不正确的金额数！");
+            return false;
+        }
+        return true;
+    }
+    </script>
+</body>
+
+</html>
